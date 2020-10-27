@@ -1,19 +1,16 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
     View,
     Text,
     Platform,
     StyleSheet,
-    ImageBackground,
-    TouchableOpacity,
-    Dimensions,
     TextInput,
     Button
 } from 'react-native';
 
-const image = { uri: "https://ak.picdn.net/shutterstock/videos/1020873769/thumb/6.jpg" };
-
-const LoginScreen = () => (
+export const LoginScreen = ({navigation}) => {
+    return(
     <View style={styles.container}>
         <View style={styles.header}>
             <Text style={styles.text_header}>Webshop</Text>
@@ -28,26 +25,20 @@ const LoginScreen = () => (
                 <TextInput secureTextEntry={true} placeholder='your password' style={styles.textInput}></TextInput>
             </View>
             <View style={styles.button}>
-                <Button title='Login' />
+                <Button title='Login' onPress={() => navigation.navigate('Products')} />
             </View>
             <View style={styles.signUpButton}>
-                <Button title='Sign Up' />
+                <Button title='Sign Up' onPress={() => navigation.navigate('RegistrationScreen')} />
             </View>
         </View>
-
     </View>
-);
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#0288d1',
-    },
-
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center"
     },
 
     header: {
@@ -81,22 +72,13 @@ const styles = StyleSheet.create({
         borderBottomColor: '#f2f2f2',
         paddingBottom: 5
     },
-    actionError: {
-        flexDirection: 'row',
-        marginTop: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#FF0000',
-        paddingBottom: 5
-    },
+
     textInput: {
         flex: 1,
         marginTop: Platform.OS === 'ios' ? 0 : -12,
         color: '#05375a',
     },
-    errorMsg: {
-        color: '#FF0000',
-        fontSize: 14,
-    },
+
     button: {
         alignItems: 'center',
         marginTop: 50
@@ -114,10 +96,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 10
     },
-    textSign: {
-        fontSize: 18,
-        fontWeight: 'bold'
-    }
+
 });
 
 export default LoginScreen;

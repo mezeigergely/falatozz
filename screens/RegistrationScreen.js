@@ -1,19 +1,18 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
     View,
     Text,
     Platform,
     StyleSheet,
-    ImageBackground,
-    TouchableOpacity,
-    Dimensions,
     TextInput,
     Button
 } from 'react-native';
 
 const image = { uri: "https://ak.picdn.net/shutterstock/videos/1020873769/thumb/6.jpg" };
 
-const RegistrationScreen = () => (
+export const RegistrationScreen = ({navigation}) => {
+    return(
     <View style={styles.container}>
         <View style={styles.header}>
             <Text style={styles.text_header}>Registration</Text>
@@ -23,28 +22,28 @@ const RegistrationScreen = () => (
             <View style={styles.action}>
                 <TextInput placeholder='your name' style={styles.textInput}></TextInput>
             </View>
-            <Text style={styles.text_footer}>E-mail</Text>
+            <Text style={[styles.text_footer, {marginTop:35}]}>E-mail</Text>
             <View style={styles.action}>
-                <TextInput placeholder='your e-mail' style={styles.textInput}></TextInput>
-            </View>
-            <Text style={styles.text_footer}>Address</Text>
-            <View style={styles.action}>
-                <TextInput placeholder='your address' style={styles.textInput}></TextInput>
+                <TextInput secureTextEntry={true} placeholder='your e-mail' style={styles.textInput}></TextInput>
             </View>
             <Text style={[styles.text_footer, {marginTop:35}]}>Password</Text>
             <View style={styles.action}>
-                <TextInput secureTextEntry={true} placeholder='your password' style={styles.textInput}></TextInput>
+                <TextInput placeholder='your password' style={styles.textInput}></TextInput>
+            </View>
+            <Text style={[styles.text_footer, {marginTop:35}]}>Address (optional)</Text>
+            <View style={styles.action}>
+                <TextInput secureTextEntry={true} placeholder='your address' style={styles.textInput}></TextInput>
             </View>
             <View style={styles.button}>
-                <Button title='Sign Up' />
+                <Button title='Sign Up' onPress={() => navigation.navigate('Products')} />
             </View>
             <View style={styles.signUpButton}>
-                <Button title='Login' />
+                <Button title='Login' onPress={() => navigation.navigate('LoginScreen')} />
             </View>
         </View>
-
     </View>
-);
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
         paddingBottom: 50
     },
     footer: {
-        flex: 7,
+        flex: 25,
         backgroundColor: '#fff',
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
