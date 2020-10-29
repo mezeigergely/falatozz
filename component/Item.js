@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, SafeAreaView, View} from "react-native";
+import {Image, Text, SafeAreaView, View, StyleSheet} from "react-native";
 import React, {Component} from "react";
 
 export default class Item extends Component {
@@ -16,7 +16,8 @@ export default class Item extends Component {
                  source={{ uri: this.props.image }}/>
              </View>
                     <Text>Price:{this.props.price} HUF</Text>
-             <View style={styles.horizontalLine}/>
+             <View/>
+
             </SafeAreaView>
         );
     }

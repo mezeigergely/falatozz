@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import 'react-native-gesture-handler';
 import {
     View,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
     },
-    
+  
     button: {
         alignItems: 'center',
         marginTop: 50
