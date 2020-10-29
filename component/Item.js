@@ -9,13 +9,13 @@ export default class Item extends Component {
     render() {
         return (
          <SafeAreaView>
-             <Text style={styles.name}>{this.props.name}</Text>
-             <View style={styles.imageView}>
+             <Text>{this.props.name}</Text>
+             <View>
                  <Image
                  style={styles.image}
                  source={{ uri: this.props.image }}/>
              </View>
-                    <Text style={styles.price}>Price:{this.props.price} HUF</Text>
+                    <Text>Price:{this.props.price} HUF</Text>
              <View style={styles.horizontalLine}/>
             </SafeAreaView>
         );
@@ -26,22 +26,5 @@ const styles = StyleSheet.create({
     image: {
         width: 100,
         height: 100,
-        borderColor: "black",
-        borderWidth: 1
     },
-    imageView : {
-        marginLeft: "2%",
-    },
-    name: {
-        marginTop: "5%",
-        marginLeft: "45%",
-    },
-    price: {
-        paddingTop:22,
-    },
-    horizontalLine: {
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
-        paddingBottom: 30
-    }
 });

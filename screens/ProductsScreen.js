@@ -5,9 +5,7 @@ import {
     StyleSheet,
     Button,
     SafeAreaView,
-    FlatList,
-    TouchableOpacity,
-    Image
+    FlatList
 } from 'react-native';
 import ItemsList from '../component/ItemsList';
 
@@ -45,34 +43,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
     },
-
-    cart: {
-        resizeMode: 'contain',
-        width: 60,
-        height: 60,
-        borderRadius: 8,
-        borderBottomRightRadius: 0,
-        borderTopRightRadius: 0,
-    },
-    TouchableOpacityStyle: {
-        position: 'absolute',
-        width: 75,
-        height: 75,
-        alignItems: 'center',
-        justifyContent: 'center',
-        right: 30,
-        bottom: 30,
-    },
-
-    footer: {
-        flex: 7,
-        backgroundColor: '#fff',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        paddingHorizontal: 20,
-        paddingVertical: 30,
-    },
-
+    
     button: {
         alignItems: 'center',
         marginTop: 50
