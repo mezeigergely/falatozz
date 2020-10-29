@@ -25,7 +25,10 @@ export const LoginScreen = ({navigation}) => {
                 <TextInput secureTextEntry={true} placeholder='your password' style={styles.textInput}></TextInput>
             </View>
             <View style={styles.button}>
-                <Button title='Login' onPress={() => navigation.navigate('ProductsScreen')} />
+                <Button title='Login' onPress={() => navigation.navigate('Login')} />
+            </View>
+            <View style={styles.button}>
+                <Button title='Next' onPress={() => navigation.navigate('ProductsScreen')} />
             </View>
             <View style={styles.signUpButton}>
                 <Button title='Sign Up' onPress={() => navigation.navigate('RegistrationScreen')} />
