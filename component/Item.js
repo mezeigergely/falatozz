@@ -11,10 +11,13 @@ export default class Item extends Component {
          <SafeAreaView>
              <Text>{this.props.name}</Text>
              <View>
-                 <Image style={styles.image} source={{ uri: this.props.image }}/>
+                 <Image
+                 style={styles.image}
+                 source={{ uri: this.props.image }}/>
              </View>
                     <Text>Price:{this.props.price} HUF</Text>
              <View/>
+
             </SafeAreaView>
         );
     }
@@ -23,7 +26,6 @@ export default class Item extends Component {
 const styles = StyleSheet.create({
     image: {
         width: 100,
-        height: 100
+        height: 100,
     },
-
 });
