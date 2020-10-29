@@ -39,7 +39,7 @@ export default class ItemsList extends Component {
                     </View>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.TouchableOpacityStyle}>
+            <TouchableOpacity style={styles.TOStyle}>
                 <Image
                     source={{ uri: 'https://w0.pngwave.com/png/317/428/shopping-cart-computer-icons-add-to-cart-button-png-clip-art.png' }}
                     style={styles.cart}
@@ -52,14 +52,6 @@ export default class ItemsList extends Component {
 }
 
 const styles = StyleSheet.create({
-    ProductImageStyle: {
-        width: 50,
-        height: 50,
-    },
-    TouchableOpacityStyle: {
-        width: 75,
-        height: 75,
-    },
     cardsWrapper: {
         marginTop: 20,
         width: '90%',
@@ -111,7 +103,7 @@ const styles = StyleSheet.create({
           borderBottomRightRadius: 0,
           borderTopRightRadius: 0,
       },
-      TouchableOpacityStyle: {
+      TOStyle: {
           position: 'absolute',
           width: 75,
           height: 75,

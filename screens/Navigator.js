@@ -7,10 +7,10 @@ import ProductDetailsScreen from './ProductDetailsScreen';
 
 const Stack = createStackNavigator();
 
-const Navigator = ({}) => (
+const Navigator = () => (
     <Stack.Navigator headerMode='none'>
         <Stack.Screen name="ProductsScreen" component={ProductsScreen} />
-        <Stack.Screen name="ProductDetailsScreen" component={ProductDetailsScreen} options={{ title: 'ProductDetailsScreen' }} />
+        <Stack.Screen name="ProductDetailsScreen" component={ProductDetailsScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="RegistrationScreen" component={RegistrationScreen} />
         
