@@ -3,69 +3,79 @@
         "id": 1,
         "name": "Hamburger",
         "price": 1500,
-        "image": "https://www.piedonepizzeria.hu/wp-content/uploads/2020/01/hamburger.png"
+        "image": "https://www.piedonepizzeria.hu/wp-content/uploads/2020/01/hamburger.png",
+        "quantity": 0
     },
 
     {
         "id": 2,
         "name": "Pizza M",
         "price": 1500,
-        "image": "https://donpedropizza.hu/wp-content/uploads/2017/03/tonno-e-cipolla.jpg"
+        "image": "https://donpedropizza.hu/wp-content/uploads/2017/03/tonno-e-cipolla.jpg",
+        "quantity": 0
     },
 
     {
         "id": 3,
         "name": "Pizza L",
         "price": 2000,
-        "image": "https://donpedropizza.hu/wp-content/uploads/2017/03/tonno-e-cipolla.jpg"
+        "image": "https://donpedropizza.hu/wp-content/uploads/2017/03/tonno-e-cipolla.jpg",
+        "quantity": 0
     },
 
     {
         "id": 4,
         "name": "Pizza XL",
         "price": 2500,
-        "image": "https://donpedropizza.hu/wp-content/uploads/2017/03/tonno-e-cipolla.jpg"
+        "image": "https://donpedropizza.hu/wp-content/uploads/2017/03/tonno-e-cipolla.jpg",
+        "quantity": 0
     },
 
     {
         "id": 5,
         "name": "Gyros",
         "price": 800,
-        "image": "https://image-api.nosalty.hu/nosalty/images/recipes/qx/RA/hazi-gyros.jpeg?w=640&h=640&fit=crop&s=a20ea931f87b7a8fa55834d265aaad1e"
+        "image": "https://image-api.nosalty.hu/nosalty/images/recipes/qx/RA/hazi-gyros.jpeg?w=640&h=640&fit=crop&s=a20ea931f87b7a8fa55834d265aaad1e",
+        "quantity": 0
     },
 
     {
         "id": 6,
         "name": "Gyros Plate",
         "price": 1300,
-        "image": "https://www.pizzadicasasopron.hu/images/products/originals/20191009_012048_20191009_011112_20191004_214516.jpg"
+        "image": "https://www.pizzadicasasopron.hu/images/products/originals/20191009_012048_20191009_011112_20191004_214516.jpg",
+        "quantity": 0
     },
 
     {
         "id": 7,
         "name": "Hot Dog",
         "price": 700,
-        "image": "https://www.mall.cz/i/42203636/800/800"
+        "image": "https://www.mall.cz/i/42203636/800/800",
+        "quantity": 0
     },
 
     {
         "id": 8,
         "name": "Döner",
         "price": 900,
-        "image": "https://holdkomp.hu/wp-content/uploads/2018/05/d%C3%B6ner.jpg"
+        "image": "https://holdkomp.hu/wp-content/uploads/2018/05/d%C3%B6ner.jpg",
+        "quantity": 0
     },
 
     {
         "id": 9,
         "name": "Sausages",
         "price": 1500,
-        "image": "https://airfryer.cooking/wp-content/uploads/2017/12/Sausages_large.jpg"
+        "image": "https://airfryer.cooking/wp-content/uploads/2017/12/Sausages_large.jpg",
+        "quantity": 0
     },
 
     {
         "id": 10,
         "name": "Sandwich",
         "price": 550,
-        "image": "https://cdn.kiwilimon.com/recetaimagen/30704/th5-640x426-34299.jpg"
+        "image": "https://cdn.kiwilimon.com/recetaimagen/30704/th5-640x426-34299.jpg",
+        "quantity": 0
     }
 ]

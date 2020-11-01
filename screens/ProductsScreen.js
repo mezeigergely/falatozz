@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import 'react-native-gesture-handler';
 import {
     View,
@@ -8,7 +8,6 @@ import {
     FlatList
 } from 'react-native';
 import ItemsList from '../component/ItemsList';
-
 
 const items = require('../data/data.json');
 
@@ -20,7 +19,10 @@ return(
                 <FlatList
                     data={items}
                     renderItem={({item}) =>
-                        <ItemsList item={item} navigation={navigation} />}
+                        <ItemsList 
+                        item={item} 
+                        navigation={navigation} 
+                        />}
                 />
             )}
             <View>
@@ -31,7 +33,7 @@ return(
                     <Button title='Sign Up' onPress={() => navigation.navigate('RegistrationScreen')} />
                 </View>
             </View>
-        </SafeAreaView>
+    </SafeAreaView>
         
         
     )

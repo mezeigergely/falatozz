@@ -15,6 +15,7 @@ export default class ItemsList extends Component {
                 name:this.props.item.name,
                 price:this.props.item.price,
                 image:this.props.item.image,
+                quantity:this.props.item.quantity
             });
     }
 
