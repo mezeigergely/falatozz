@@ -6,14 +6,16 @@ import { Text,
   Dimensions,
   View,
   ScrollView,
-  TextInput,
   TouchableOpacity
 } from 'react-native';
 
-// import AsyncStorage
 import AsyncStorage from '@react-native-community/async-storage';
 // import icons
 import Icon from 'react-native-vector-icons/Ionicons';
+
+import foods from "../data/data.json";
+
+import Lightbox from 'react-native-lightbox';
 
 
 var {height, width } = Dimensions.get('window');
@@ -24,30 +26,14 @@ export default class App extends Component {
   {
     super(props);
     this.state = {
-      dataBanner:[],
-      dataCategories:[],
-      dataFood:[],
-      selectCatg:0
+      dataFood:[]
     }
   }
 
-  componentDidMount(){
-    const url = "http://tutofox.com/foodapp/api.json"
-    return fetch(url)
-    .then((response) => response.json())
-    .then((responseJson) => {
-
+  componentDidMount() {
       this.setState({
-        isLoading: false,
-        dataBanner: responseJson.banner,
-        dataCategories: responseJson.categories,
-        dataFood:responseJson.food
-      });
-
-    })
-    .catch((error) =>{
-      console.error(error);
-    });
+          dataFood: foods.food
+      })
   }
 
   render() {
@@ -82,8 +68,9 @@ export default class App extends Component {
             resizeMode="contain"
             source={{uri:item.image}} />
             <View style={{height:((width/2)-20)-90, backgroundColor:'transparent', width:((width/2)-20)-10}} />
+            
             <Text style={{fontWeight:'bold',fontSize:22,textAlign:'center'}}>{item.name}</Text>
-            <Text style={{fontSize:20,color:"green"}}>${item.price}</Text>
+            <Text style={{fontSize:20,color:"green"}}>{item.price} HUF</Text>
             <TouchableOpacity
             onPress={()=>this.onClickAddCart(item)}
             style={{
@@ -113,6 +100,7 @@ export default class App extends Component {
  
     AsyncStorage.getItem('cart').then((datacart)=>{
         if (datacart !== null) {
+
           const cart = JSON.parse(datacart)
           cart.push(itemcart)
           AsyncStorage.setItem('cart',JSON.stringify(cart));
