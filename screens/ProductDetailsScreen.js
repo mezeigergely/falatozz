@@ -17,16 +17,14 @@ export const ProductDetailsScreen = ({ route, navigation: { goBack } }) => {
             name={product.name}
             price={product.price}
             image={product.image}
+            quantity={product.quantity}
             />
-                <View>
-                <View style={styles.button}>
-                    <Button title='Back' onPress={() => goBack()} />
-                </View>
+            <View style={styles.button}>
+                <Button title='Back' onPress={() => goBack()} />
             </View>
         </SafeAreaView>
     );
 }
-
 const styles = StyleSheet.create({
 
     button: {
@@ -38,6 +36,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 20,
     },
+
+    quantityButton: {
+        paddingHorizontal:8, 
+        fontWeight:'bold', 
+        fontSize:50, 
+        textAlign: 'center'
+    },
+
+    quantityStyle: {
+        paddingHorizontal:8,
+        fontWeight:'bold',
+        fontSize:30
+    }
+
+    
 
 });
 

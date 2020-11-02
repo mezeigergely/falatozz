@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import ItemsList from '../component/ItemsList';
 
-
 const items = require('../data/data.json');
 
 export const ProductsScreen = ({navigation}) => {
@@ -20,7 +19,10 @@ return(
                 <FlatList
                     data={items}
                     renderItem={({item}) =>
-                        <ItemsList item={item} navigation={navigation} />}
+                        <ItemsList 
+                        item={item} 
+                        navigation={navigation} 
+                        />}
                 />
             )}
             <View>
@@ -31,7 +33,7 @@ return(
                     <Button title='Sign Up' onPress={() => navigation.navigate('RegistrationScreen')} />
                 </View>
             </View>
-        </SafeAreaView>
+    </SafeAreaView>
         
         
     )
