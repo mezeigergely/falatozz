@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { Text, View, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 var { width } = Dimensions.get("window")
 
-// import Components
 import Food from './Food'
 import Cart from './Cart'
 import Address from './Address'
 import Profile from './Profile'
-// unable console yellow
+
 console.disableYellowBox = true;
-// import icons
+
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class App extends Component {

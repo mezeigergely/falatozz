@@ -2,26 +2,13 @@ import React from 'react';
 import {SafeAreaView,
     View, 
     StyleSheet,
-    Button,
-    Text,
-    TouchableOpacity
+    Button
  } from 'react-native';
 import Item from "../component/Item";
 
 export const ProductDetailsScreen = ({ route, navigation: { goBack } }) => {
     
     const product = route.params;
-
-
-    const onChangeQual = (type) => {
-        if(type){
-            {product.quantity-1}
-        }
-        else
-        {
-            {product.quantity+1}
-        }
-    };
 
     return (
         <SafeAreaView>
@@ -32,17 +19,6 @@ export const ProductDetailsScreen = ({ route, navigation: { goBack } }) => {
             image={product.image}
             quantity={product.quantity}
             />
-            <View>
-                <View style={{flexDirection:'row', alignItems:'center'}}>
-                <TouchableOpacity>
-                    <Text style={styles.quantityButton} onPress={onChangeQual(false)}>-</Text>
-                </TouchableOpacity>
-                    <Text style={styles.quantityStyle}>{product.quantity}</Text>
-                <TouchableOpacity>
-                    <Text style={styles.quantityButton} onPress={onChangeQual(true)}>+</Text>
-                </TouchableOpacity>
-                </View>
-            </View>
             <View style={styles.button}>
                 <Button title='Back' onPress={() => goBack()} />
             </View>

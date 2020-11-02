@@ -10,12 +10,10 @@ import { Text,
 } from 'react-native';
 
 import AsyncStorage from '@react-native-community/async-storage';
-// import icons
+
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import foods from "../data/data.json";
-
-import Lightbox from 'react-native-lightbox';
 
 
 var {height, width } = Dimensions.get('window');

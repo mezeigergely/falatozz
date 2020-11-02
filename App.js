@@ -6,7 +6,6 @@ import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   const [isLoading, setIsLoading] = React.useState(true);
-  const [userToken, setUserToken] = React.useState(null);
 
   useEffect(() => {
     setTimeout(() => {

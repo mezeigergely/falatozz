@@ -9,8 +9,6 @@ import {
     Button
 } from 'react-native';
 
-const image = { uri: "https://ak.picdn.net/shutterstock/videos/1020873769/thumb/6.jpg" };
-
 export const RegistrationScreen = ({navigation}) => {
     return(
     <View style={styles.container}>
@@ -35,7 +33,7 @@ export const RegistrationScreen = ({navigation}) => {
                 <TextInput secureTextEntry={true} placeholder='your address' style={styles.textInput}></TextInput>
             </View>
             <View style={styles.button}>
-                <Button title='Sign Up' onPress={() => navigation.navigate('Products')} />
+                <Button title='Sign Up'/>
             </View>
             <View style={styles.signUpButton}>
                 <Button title='Login' onPress={() => navigation.navigate('LoginScreen')} />
